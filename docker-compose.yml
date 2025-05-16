@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  db:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: portfoliodb
+      MYSQL_USER: portfolio
+      MYSQL_PASSWORD: portfoliopw
+    volumes:
+      - /mnt/mysql-data:/var/lib/mysql
+      - ./mysql_config/mysqld.cnf:/etc/mysql/conf.d/mysqld.cnf:ro
+    ports:
+      - "3308:3306"
+
+  backend:
+    build:
+      context: ./backend
+    env_file:
+      - ./backend/.env
+    restart: always
+    ports:
+      - "3036:3000"
+    depends_on:
+      - db

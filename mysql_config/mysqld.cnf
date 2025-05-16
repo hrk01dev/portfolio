@@ -1,0 +1,3 @@
+[mysqld]
+# use the old native‐password plugin so Prisma can authenticate
+default_authentication_plugin = mysql_native_password

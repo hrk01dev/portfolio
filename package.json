@@ -1,0 +1,31 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "start:dev": "concurrently \"yarn --cwd backend start:dev\" \"yarn --cwd frontend start\"",
+    "build": "yarn --cwd backend build && yarn --cwd frontend build",
+    "lint": "yarn --cwd backend lint && yarn --cwd frontend lint",
+    "test": "yarn --cwd backend test && yarn --cwd frontend test"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "keywords": [
+    "portfolio",
+    "hrk",
+    "hariramk",
+    "hariram",
+    "full",
+    "stack",
+    "developer",
+    "fullstack",
+    "fullstackdeveloper",
+    "git"
+  ],
+  "author": "hariramk",
+  "license": "ISC"
+}
