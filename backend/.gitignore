@@ -1,0 +1,19 @@
+# Node dependencies\ n
+node_modules/
+
+# Build output\ n
+dist/
+
+# Environment\ n
+.env
+
+# Prisma migrations (if tracked here)
+prisma/migrations/
+
+# Logs\ n
+npm-debug.log*
+yarn-error.log*
+
+# IDE & OS\ n
+.vscode/
+.DS_Store
